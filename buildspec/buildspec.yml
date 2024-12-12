@@ -16,5 +16,5 @@ phases:
   build:
     commands:
       - echo Applying Terraform configuration...
-      - terraform apply -auto-approve
+      - yes | terraform apply
 
