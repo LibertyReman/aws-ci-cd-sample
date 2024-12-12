@@ -11,11 +11,9 @@ phases:
   pre_build:
     commands:
       - echo Initializing Terraform...
-      - cd terraform
-      - terraform init
+      - terraform -chdir=terraform init
   build:
     commands:
       - echo Applying Terraform configuration...
-      - cd terraform
-      - terraform apply -auto-approve
+      - terraform -chdir=terraform apply -auto-approve
 
